@@ -8,17 +8,26 @@ import com.google.gson.Gson;
 public class SearchRequest {
 
 	private static String BASE_URL = "https://www.googleapis.com/customsearch/v1?";
-	private String myApiKey;
-	
 	private static String FIELD_LIMITER = "&fields=items(title,snippet)";
 	private static String REQUEST_METHOD = "GET";
 
-	public SearchRequest(String apiKey) {
-		this.myApiKey = apiKey;
+	private String mySearchTerm;
+
+	public SearchRequest(String searchTerm) {
+		this.mySearchTerm = searchTerm;
 	} 
 
-	public SearchResponse make(String searchTerm) throws IOException {
-		URL url = new URL(BASE_URL+"key="+myApiKey+"&cx="+PersonalInfo.SEARCH_ENGINE_ID+"&q="+searchTerm+FIELD_LIMITER);
+	public SearchResponse make() throws IOException {
+		URL url = new URL(
+				BASE_URL+
+				"key="+
+				PersonalInfo.API_KEY+
+				"&cx="+
+				PersonalInfo.SEARCH_ENGINE_ID+
+				"&q="+
+				mySearchTerm.replace(" ", "+")+
+				FIELD_LIMITER
+				);
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 		conn.setRequestMethod(REQUEST_METHOD);
 		DataInputStream input = new DataInputStream(conn.getInputStream());
