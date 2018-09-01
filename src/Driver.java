@@ -18,7 +18,7 @@ public class Driver extends Application {
 		Scene scene = new Scene(new Group(), SCENE_SIZE, SCENE_SIZE, BACKGROUND);
 		scene.setOnKeyPressed(e -> {
 			try {
-				assistant.makeGuess();
+				assistant.assist();
 			} catch (IOException e1) {
 				e1.printStackTrace();
 				// TODO: handle this exception more responsibly
