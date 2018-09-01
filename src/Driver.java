@@ -21,6 +21,7 @@ public class Driver extends Application {
 				assistant.makeGuess();
 			} catch (IOException e1) {
 				e1.printStackTrace();
+				// TODO: handle this exception more responsibly
 			}
 		});
 		stage.setScene(scene);

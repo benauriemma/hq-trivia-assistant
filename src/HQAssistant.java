@@ -19,37 +19,24 @@ import javafx.stage.Stage;
 
 public class HQAssistant {
 	
-	private static final Integer LEFT_SIDE = 860;
-	private static final Integer WIDTH = 400;
-	private static final Integer QUESTION_START = 130;
-	private static final Integer QUESTION_HEIGHT = 200;
-	private static final Integer A1_START = 340;
-	private static final Integer A2_START = 410;
-	private static final Integer A3_START = 480;
-	private static final Integer ANSWER_HEIGHT = 60;
-	private static final Rectangle QUESTION_RECTANGLE = new Rectangle(LEFT_SIDE, QUESTION_START, WIDTH, QUESTION_HEIGHT);
-	private static final Rectangle ANSWER_1_RECTANGLE = new Rectangle(LEFT_SIDE, A1_START, WIDTH, ANSWER_HEIGHT);
-	private static final Rectangle ANSWER_2_RECTANGLE = new Rectangle(LEFT_SIDE, A2_START, WIDTH, ANSWER_HEIGHT);
-	private static final Rectangle ANSWER_3_RECTANGLE = new Rectangle(LEFT_SIDE, A3_START, WIDTH, ANSWER_HEIGHT);
-	
 	private ImageReader questionReader = new ImageReader(PersonalInfo.API_KEY);
 	private ImageReader answer1Reader = new ImageReader(PersonalInfo.API_KEY);
 	private ImageReader answer2Reader = new ImageReader(PersonalInfo.API_KEY);
 	private ImageReader answer3Reader = new ImageReader(PersonalInfo.API_KEY);
 	private TextSearcher searcher = new TextSearcher(PersonalInfo.API_KEY);
-	private Robot robot;
+	private Robot robot = new Robot();
 
 	HQAssistant() throws AWTException {
-		robot = new Robot();
+		// do nothing
 	}
 
 	public void makeGuess() throws IOException {
 		System.out.println("\n\n\n");
 		long start = System.currentTimeMillis();
-		BufferedImage questionCapture = robot.createScreenCapture(QUESTION_RECTANGLE);
-		BufferedImage a1Capture = robot.createScreenCapture(ANSWER_1_RECTANGLE);
-		BufferedImage a2Capture = robot.createScreenCapture(ANSWER_2_RECTANGLE);
-		BufferedImage a3Capture = robot.createScreenCapture(ANSWER_3_RECTANGLE);
+		BufferedImage questionCapture = robot.createScreenCapture(BoundingBoxes.QUESTION);
+		BufferedImage a1Capture = robot.createScreenCapture(BoundingBoxes.ANSWER_1);
+		BufferedImage a2Capture = robot.createScreenCapture(BoundingBoxes.ANSWER_2);
+		BufferedImage a3Capture = robot.createScreenCapture(BoundingBoxes.ANSWER_3);
 		String question = questionReader.read(questionCapture);
 		String answer1 = answer1Reader.read(a1Capture);
 		String answer2 = answer2Reader.read(a2Capture);
