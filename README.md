@@ -18,7 +18,7 @@ The projects dependencies are managed with Maven.  The following are the steps I
 4. Click Run.
 
 If step 3 fails, some things to try:
-* Restarting Eclipse
+* Restart Eclipse
 * Project > Clean... > Clean
 
 ### Using the assistant
@@ -31,10 +31,12 @@ Currently the project is configured specifically for my computer (a 13" Macbook 
 6. The three answers and a score for each will be printed to the console.  The answer with the highest score is the assistant's best guess.
 7. Press the space bar again each time a new question is shown.
 
+Making this process less platform dependent is on the roadmap.
+
 ### Current state
 The assistant can successfully read and google a question, but it's not very "smart" yet.  That is, the logic it uses to build a query and make a guess is fairly simplistic, and only works for some types of questions.  Though I haven't done extensive or scientific testing, I'd estimate that it makes a correct guess for about 1 in 4 questions.  It rarely guesses incorrectly, but often returns a score of 0 for all answers.
 
 ### TODO
 See the Issues section of this repository for some more granular todo's, but my two main goals moving forward with this project are:
 1. Create new logic for generating search queries and analyzing the results to choose a correct answer more consistently
-2. Make it more friendly for others to contribute
+2. Make it more friendly for others to use and contribute
