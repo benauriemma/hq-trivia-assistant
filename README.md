@@ -2,9 +2,10 @@
 An HQ Trivia assistant for those of us who are better with REST API's than trivia.  This application is meant to help you answer questions in the HQ Trivia mobile game.  (Well) within the 10-second time limit of a question, it will:
 * Screenshot the question and answers
 * Use Google's Vision API to extract the text of the question and answers
-* Generate a search query
-* Execute that query using Google's Custom Search API
-* Analyze the results of the search
+* Parse the question and choose a set of guessing logic depending on question type
+* Generate one or more search queries
+* Execute the queries using Google's Custom Search API
+* Analyze the results of the searches
 * Suggest the most likely answer
 
 ### DISCLAIMER
@@ -57,9 +58,9 @@ Currently the project is configured specifically for my computer (a 13" Macbook 
 Making this process less platform dependent is on the roadmap.
 
 ### Current state
-The assistant can successfully read and google a question, but it's not very "smart" yet.  That is, the logic it uses to build a query and make a guess is fairly simplistic, and only works for some types of questions.  Though I haven't done extensive or scientific testing, I'd estimate that it makes a correct guess for about 1 in 4 questions.  It rarely guesses incorrectly, but often returns a score of 0 for all answers.
+The assistant can successfully read and google a question, but it's not very "smart" yet.  That is, the sets of logic it uses to build a query and make a guess are fairly simplistic, and they only work for some types of questions.  Though I haven't done extensive or scientific testing, I'd estimate that it makes a correct guess for about 1 in 3 questions.  It rarely guesses incorrectly, but often returns a score of 0 for all answers.
 
 ### TODO
 See the Issues section of this repository for some more granular todo's, but my two main goals moving forward with this project are:
-1. Create new logic for generating search queries and analyzing the results to choose a correct answer more consistently
-2. Make it more friendly for others to use and contribute
+1. Create more logic for recognizing different question types, and new search queries and result analysis for those types.  This should help choose the correct answer more consistently
+2. Make it more friendly for others to use and contribute to the project
