@@ -6,5 +6,10 @@ public class TextSearcher {
 		SearchRequest request = new SearchRequest(searchTerm);
 		return request.make();
 	}
+	
+	public SearchResponse search(String searchTerm, String exclusionTerm) throws IOException {
+		SearchRequest request = new SearchRequest(searchTerm, exclusionTerm);
+		return request.make();
+	}
 
 }
