@@ -13,7 +13,7 @@ Using this during a live game of HQ Trivia would be a violation of the app's ter
 ### Downloading and running
 The projects dependencies are managed with Maven.  The following are the steps I use to download and run the project using Mac and Eclipse, but I expect the process will be similar with other operating systems or IDEs:
 1. Download the project to your local machine using ```git clone your-url```.  ```your-url``` can be found by clicking the "Clone or download" icon at the main page of this Github repository.
-2. From Eclipse, select File > Import... > Projects from Folder or Archive.  Then, click Directory... and navigate to Uthe project folder on your local drive.
+2. From Eclipse, select File > Import... > Projects from Folder or Archive.  Then, click Directory... and navigate to the project folder on your local drive.
 3. Maven should automatically resolve dependencies, and Eclipse should automatically recognize Driver.java as the main class.
 4. You should have errors now because the file PersonalInfo.java doesn't exist.  You'll need to follow the instructions in the following section to obtain an API key and a search engine ID.  Then, create a file PersonalInfo.java that resembles:
 ```java
