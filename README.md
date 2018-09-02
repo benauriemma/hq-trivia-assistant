@@ -15,11 +15,34 @@ The projects dependencies are managed with Maven.  The following are the steps I
 1. Download the project to your local machine using ```git clone your-url```.  ```your-url``` can be found by clicking the "Clone or download" icon at the main page of this Github repository.
 2. From Eclipse, select File > Import... > Projects from Folder or Archive.  Then, click Directory... and navigate to the project folder on your local drive.
 3. Maven should automatically resolve dependencies, and Eclipse should automatically recognize Driver.java as the main class.
-4. Click Run.
+4. You should have errors now because the file PersonalInfo.java doesn't exist.  You'll need to follow the instructions in the following section to obtain an API key and a search engine ID.  Then, create a file PersonalInfo.java that resembles:
+```java
+public final class PersonalInfo {
+	public static final String API_KEY = "your-api-key";
+	public static final String SEARCH_ENGINE_ID = "your-search-engine-id";
+}
+```
+5. Click Run.
 
 If step 3 fails, some things to try:
 * Restart Eclipse
 * Project > Clean... > Clean
+
+### Setting up Google Cloud Platform
+You'll need to take a few simple steps to get yourself access to the Google APIs used by this project.  If the information here isn't comprehensive, there's a fair amount of documentation online (both by Google and others) that might help you get set up.
+
+##### Vision API
+1. Set up an account for Google Cloud Platform if you don't already have one.
+2. Create a new project.  There should be a dropdown at the top left of the GCP homepage/console.
+3. Click "APIs & Services", then "Dashboard", then "ENABLE APIS AND SERVICES".  Search for the Vision API and enable it.
+4. Go back to the APIs & Services screen, and click on "Credentials".  Copy the API key for the project you created.  This is the value of API_KEY in PersonalInfo.
+
+##### Custom Search
+1. Follow the instructions here to create a Custom Search Engine: https://developers.google.com/custom-search/docs/tutorial/creatingcse
+2. Enter any url in the "Sites to search" section; you'll remove that later.
+3. Under "Search Preferences", choose "Search the entire web but emphasize included sites".
+4. Now, remove the url you added the the "Sites to search" section earlier.  This should now search the whole web.
+5. Copy the search engine ID.  This is the value of SEARCH_ENGINE_ID in PersonalInfo.
 
 ### Using the assistant
 Currently the project is configured specifically for my computer (a 13" Macbook Pro) and my phone (an iPhone 6 Plus), so it may take some adjustment to work for you.  That said, these are the steps I use:
