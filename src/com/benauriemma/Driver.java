@@ -1,3 +1,5 @@
+package com.benauriemma;
+
 import java.io.IOException;
 
 import javafx.application.Application;

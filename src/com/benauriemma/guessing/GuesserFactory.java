@@ -1,3 +1,6 @@
+package com.benauriemma.guessing;
+
+import com.benauriemma.vision.Trivia;
 
 /**
  * Used to dynamically choose a Guesser implementation based on the type of question

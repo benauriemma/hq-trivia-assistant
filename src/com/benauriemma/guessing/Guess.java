@@ -1,3 +1,5 @@
+package com.benauriemma.guessing;
+
 /**
  * Represents the assistant's guess for a question
  * 

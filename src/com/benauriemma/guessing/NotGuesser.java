@@ -1,4 +1,10 @@
+package com.benauriemma.guessing;
+
 import java.io.IOException;
+
+import com.benauriemma.search.SearchResponse;
+import com.benauriemma.search.TextSearcher;
+import com.benauriemma.vision.Trivia;
 
 /**
  * A Guesser used for question that contain the keyword NOT

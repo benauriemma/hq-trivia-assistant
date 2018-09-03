@@ -1,5 +1,12 @@
+package com.benauriemma;
+
 import java.awt.AWTException;
 import java.io.IOException;
+
+import com.benauriemma.guessing.Guess;
+import com.benauriemma.guessing.GuesserFactory;
+import com.benauriemma.vision.Trivia;
+import com.benauriemma.vision.TriviaReader;
 
 /**
  * When a key is pressed, this class carries out the process of assisting in answering a question

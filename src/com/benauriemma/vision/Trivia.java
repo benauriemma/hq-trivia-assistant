@@ -1,3 +1,4 @@
+package com.benauriemma.vision;
 
 /**
  * Class representing an HQ Trivia question and its 3 answers

@@ -1,3 +1,5 @@
+package com.benauriemma.constants;
+
 import java.awt.Rectangle;
 
 /**
