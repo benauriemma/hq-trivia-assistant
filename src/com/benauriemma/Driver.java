@@ -2,8 +2,6 @@ package com.benauriemma;
 
 import java.io.IOException;
 
-import com.benauriemma.HQAssistant;
-
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;

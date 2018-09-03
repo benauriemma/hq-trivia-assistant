@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.benauriemma.search.SearchResponse;
 import com.benauriemma.search.TextSearcher;
+import com.benauriemma.vision.Trivia;
 
 /**
  * A default Guesser used for most questions

@@ -2,6 +2,8 @@ package com.benauriemma.guessing;
 
 import java.io.IOException;
 
+import com.benauriemma.vision.Trivia;
+
 /**
  * Interface for a Guesser, to be implemented for each new set of guessing logic
  * 
