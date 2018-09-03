@@ -7,6 +7,13 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 
+/**
+ * Main class to start application
+ * Uses JavaFX to react to key press
+ * 
+ * @author benauriemma
+ *
+ */
 public class Driver extends Application {
 
 	public static final int SCENE_SIZE = 400;

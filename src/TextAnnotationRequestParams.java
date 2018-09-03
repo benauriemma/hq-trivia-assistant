@@ -1,6 +1,13 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class representing the parameters for a POST request to the Vision API
+ * Used to construct the json object
+ * 
+ * @author benauriemma
+ *
+ */
 public class TextAnnotationRequestParams {
 	private List<Request> requests;
 
@@ -10,6 +17,9 @@ public class TextAnnotationRequestParams {
 	}
 }
 
+/**
+ * Class representing the "request" json object
+ */
 class Request {
 	private ImageObj image;
 	private List<FeatureObj> features;
@@ -21,6 +31,9 @@ class Request {
 	}
 }
 
+/**
+ * Class representing the "image" json object
+ */
 class ImageObj {
 	private String content;
 
@@ -29,7 +42,9 @@ class ImageObj {
 	}
 }
 
+/**
+ * Class representing the "feature" json object
+ */
 class FeatureObj {
 	private String type = "TEXT_DETECTION";
 }
-

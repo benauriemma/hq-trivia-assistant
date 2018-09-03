@@ -1,5 +1,11 @@
 import java.awt.Rectangle;
 
+/**
+ * Final class containing constants that define where the question and answers are located on the screen
+ * 
+ * @author benauriemma
+ *
+ */
 public final class BoundingBoxes {
 	private static final Integer LEFT_SIDE = 860;
 	private static final Integer WIDTH = 400;

@@ -49,7 +49,7 @@ You'll need to take a few simple steps to get yourself access to the Google APIs
 Currently the project is configured specifically for my computer (a 13" Macbook Pro) and my phone (an iPhone 6 Plus), so it may take some adjustment to work for you.  That said, these are the steps I use:
 1. Plug my phone into my computer via a lightning cable.
 2. Open Quicktime, and select File > New Movie Recording, then from the dropdown next to the record button, select my iPhone.
-3. My phone screen should now be shown on my laptop.  Make this window as tall as possible and put it against the right side of my display.  The program expects the questions and answers to be in a very specific place, which may be different for you depending on your devices/display sizes.  This would need to be adjusted in the code.
+3. My phone screen should now be shown on my laptop.  Make this window as tall as possible and put it against the right side of my display.  The program expects the questions and answers to be in a very specific place, which may be different for you depending on your devices/display sizes.  This would need to be adjusted in BoundingBoxes.java.
 4. Now, run the application as described in the section above.  A small window should pop up; make sure this is selected so that it recognizes keyboard inputs.  The iPhone screen and the Eclipse console should both be visible, too.
 5. As soon as a question becomes visible on the screen, press the space bar.  This triggers the application to take screenshots and make a guess.
 6. The three answers and a score for each will be printed to the console.  The answer with the highest score is the assistant's best guess.
