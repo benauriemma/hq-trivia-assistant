@@ -1,3 +1,5 @@
+package com.benauriemma.guessing;
+
 import java.io.IOException;
 
 /**

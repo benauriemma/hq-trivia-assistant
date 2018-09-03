@@ -1,3 +1,5 @@
+package com.benauriemma.vision;
+
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.image.BufferedImage;
@@ -5,6 +7,8 @@ import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
+
+import com.benauriemma.constants.BoundingBoxes;
 
 /**
  * Class responsible for the behavior of screenshotting a trivia question and answers, and transcribing the images to text

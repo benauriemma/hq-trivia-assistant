@@ -1,3 +1,4 @@
+package com.benauriemma.search;
 import java.util.List;
 import java.util.stream.Collectors;
 

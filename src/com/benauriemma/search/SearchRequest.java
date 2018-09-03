@@ -1,8 +1,11 @@
+package com.benauriemma.search;
+
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import com.benauriemma.constants.PersonalInfo;
 import com.google.gson.Gson;
 
 /**

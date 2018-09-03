@@ -1,3 +1,5 @@
+package com.benauriemma.vision;
+
 import java.util.ArrayList;
 import java.util.List;
 

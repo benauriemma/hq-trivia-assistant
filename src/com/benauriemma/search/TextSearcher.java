@@ -1,3 +1,5 @@
+package com.benauriemma.search;
+
 import java.io.IOException;
 
 /**
