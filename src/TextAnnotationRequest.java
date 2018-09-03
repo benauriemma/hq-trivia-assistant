@@ -15,6 +15,12 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
+/**
+ * Class representing a request to Google's Vision API
+ * 
+ * @author benauriemma
+ *
+ */
 public class TextAnnotationRequest {
 
 	private static String BASE_URL = "https://vision.googleapis.com/v1/images:annotate?key=";
@@ -27,6 +33,12 @@ public class TextAnnotationRequest {
 		myImage = bufferedImage;
 	}
 
+	/**
+	 * Make the request to the Vision API with the image that was provided in the constructor
+	 * 
+	 * @return the response as a TextAnnotationResponse
+	 * @throws IOException
+	 */
 	public TextAnnotationResponse make() throws IOException {
 		URL url = new URL(BASE_URL+PersonalInfo.API_KEY+FIELD_LIMITER);
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -44,10 +56,23 @@ public class TextAnnotationRequest {
 		return new Gson().fromJson(response, TextAnnotationResponse.class);
 	}
 
+	/**
+	 * Create the json object that contains the parameters for the POST request
+	 * 
+	 * @param imageEncoding
+	 * @return
+	 */
 	private String getParameters(String imageEncoding) {
 		return new Gson().toJson(new TextAnnotationRequestParams(imageEncoding));
 	}
 
+	/**
+	 * Encode the image that we're annotating in Base 64
+	 * 
+	 * @param bufferedImage to annotate
+	 * @return the Base 64 representation
+	 * @throws IOException
+	 */
 	private String getImageEncoding(BufferedImage bufferedImage) throws IOException {
 		ByteArrayOutputStream bos = new ByteArrayOutputStream();
 		ImageIO.write(bufferedImage, "png", bos);

@@ -1,4 +1,10 @@
 
+/**
+ * Class representing an HQ Trivia question and its 3 answers
+ * 
+ * @author benauriemma
+ *
+ */
 public class Trivia {
 	
 	private String myQuestion;

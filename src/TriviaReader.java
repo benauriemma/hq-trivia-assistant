@@ -6,6 +6,12 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+/**
+ * Class responsible for the behavior of screenshotting a trivia question and answers, and transcribing the images to text
+ * 
+ * @author benauriemma
+ *
+ */
 public class TriviaReader {
 	
 	private ImageTranscriber myImageTranscriber = new ImageTranscriber();
@@ -13,8 +19,15 @@ public class TriviaReader {
 	
 	public TriviaReader() throws AWTException {
 		// do nothing
+		// empty constructor required to show that it throws exception
 	}
 	
+	/**
+	 * Captures the question and answers from screen, transcribes them, and return the text in a Trivia object
+	 * 
+	 * @return a Trivia object for this question
+	 * @throws IOException
+	 */
 	public Trivia read() throws IOException {
 		BufferedImage questionCapture = myRobot.createScreenCapture(BoundingBoxes.QUESTION);
 		BufferedImage a1Capture = myRobot.createScreenCapture(BoundingBoxes.ANSWER_1);
@@ -27,6 +40,17 @@ public class TriviaReader {
 		return new Trivia(question, answer1, answer2, answer3);
 	}
 	
+	/**
+	 * Saves the screenshots of a question and its answers to disk
+	 * This method is currently unused, but can be used for testing/debugging purposes,
+	 * 	especially when setting up bounding boxes on a new different device
+	 * 
+	 * @param questionCapture
+	 * @param a1Capture
+	 * @param a2Capture
+	 * @param a3Capture
+	 * @throws IOException
+	 */
 	private void logImages(
 			BufferedImage questionCapture, 
 			BufferedImage a1Capture,

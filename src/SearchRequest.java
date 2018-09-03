@@ -5,6 +5,12 @@ import java.net.URL;
 
 import com.google.gson.Gson;
 
+/**
+ * Class representing a GET request to Google's Custom Search Engine
+ * 
+ * @author benauriemma
+ *
+ */
 public class SearchRequest {
 
 	private static String BASE_URL = "https://www.googleapis.com/customsearch/v1?";
@@ -23,6 +29,12 @@ public class SearchRequest {
 		this.myExclusionTerm = exclusionTerm;
 	}
 
+	/**
+	 * Make this request to Custom Search with the terms passed in the constructor
+	 * 
+	 * @return the response from Google as a SearchResponse object
+	 * @throws IOException
+	 */
 	public SearchResponse make() throws IOException {
 		URL url = new URL(
 				BASE_URL+
